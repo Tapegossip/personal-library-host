@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Search, ExternalLink as LinkIcon, X } from 'lucide-react';
+import { Search, X } from 'lucide-react';
 import { useSearch } from '../hooks/useSearch';
 import { libraryItems, allTags, allMediaTypes } from '../data/library';
 import ExternalLink from '../components/ExternalLink';
@@ -95,7 +95,7 @@ const Library = () => {
                   <motion.tr
                     key={item.id}
                     variants={itemVariants}
-                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                    className="border-b border-white/5 hover:bg-white/5 transition-colors dark:hover:bg-white/5 hover:bg-slate-100"
                   >
                     <TableCell className="py-4 pr-4">
                       <div className="font-medium">{item.title}</div>
@@ -104,7 +104,7 @@ const Library = () => {
                     <TableCell className="py-4 pr-4 text-sm">{item.publishedYear}</TableCell>
                     <TableCell className="py-4 text-right">
                       <ExternalLink href={item.link} className="text-sm">
-                        <LinkIcon className="h-4 w-4" />
+                        <span className="sr-only">Visit link for {item.title}</span>
                       </ExternalLink>
                     </TableCell>
                   </motion.tr>
