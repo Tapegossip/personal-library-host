@@ -82,32 +82,34 @@ const Library = () => {
               <TableHead className="text-right">Link</TableHead>
             </TableRow>
           </TableHeader>
-          <TableBody 
-            as={motion.tbody}
-            initial="hidden"
-            animate={mounted ? "visible" : "hidden"}
-            variants={containerVariants}
-          >
-            {filteredItems.length > 0 ? (
-              filteredItems.map((item) => (
-                <TableRow 
-                  key={item.id} 
-                  as={motion.tr} 
-                  variants={itemVariants}
-                  className="border-b border-white/5 hover:bg-white/5 transition-colors"
-                >
-                  <TableCell className="py-4 pr-4">
-                    <div className="font-medium">{item.title}</div>
-                  </TableCell>
-                  <TableCell className="py-4 pr-4 text-sm">{item.author}</TableCell>
-                  <TableCell className="py-4 pr-4 text-sm">{item.publishedYear}</TableCell>
-                  <TableCell className="py-4 text-right">
-                    <ExternalLink href={item.link} className="text-sm">
-                      <LinkIcon className="h-4 w-4" />
-                    </ExternalLink>
-                  </TableCell>
-                </TableRow>
-              ))
+          {/* Instead of using as={motion.tbody}, we'll use a regular TableBody with motion children */}
+          <TableBody>
+            {mounted && filteredItems.length > 0 ? (
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="contents" // This makes the div behave like its children in terms of display
+              >
+                {filteredItems.map((item) => (
+                  <motion.tr
+                    key={item.id}
+                    variants={itemVariants}
+                    className="border-b border-white/5 hover:bg-white/5 transition-colors"
+                  >
+                    <TableCell className="py-4 pr-4">
+                      <div className="font-medium">{item.title}</div>
+                    </TableCell>
+                    <TableCell className="py-4 pr-4 text-sm">{item.author}</TableCell>
+                    <TableCell className="py-4 pr-4 text-sm">{item.publishedYear}</TableCell>
+                    <TableCell className="py-4 text-right">
+                      <ExternalLink href={item.link} className="text-sm">
+                        <LinkIcon className="h-4 w-4" />
+                      </ExternalLink>
+                    </TableCell>
+                  </motion.tr>
+                ))}
+              </motion.div>
             ) : (
               <TableRow>
                 <TableCell colSpan={4} className="py-8 text-center text-muted-foreground">

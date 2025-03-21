@@ -40,23 +40,26 @@ const ThemeToggle = () => {
   // Prevent flash of incorrect theme
   if (!mounted) return null;
 
+  // Instead of using the Button with motion props directly, we'll wrap the button in a motion.div
   return (
-    <Button
-      variant="ghost"
-      size="icon"
-      onClick={toggleTheme}
-      className="p-0 hover:bg-white/5"
+    <motion.div
       whileTap={{ scale: 0.9 }}
       whileHover={{ rotate: 15 }}
-      as={motion.button}
-      aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
     >
-      {theme === 'dark' ? (
-        <Sun className="h-[18px] w-[18px]" />
-      ) : (
-        <Moon className="h-[18px] w-[18px]" />
-      )}
-    </Button>
+      <Button
+        variant="ghost"
+        size="icon"
+        onClick={toggleTheme}
+        className="p-0 hover:bg-white/5"
+        aria-label={`Switch to ${theme === 'dark' ? 'light' : 'dark'} mode`}
+      >
+        {theme === 'dark' ? (
+          <Sun className="h-[18px] w-[18px]" />
+        ) : (
+          <Moon className="h-[18px] w-[18px]" />
+        )}
+      </Button>
+    </motion.div>
   );
 };
 
