@@ -31,7 +31,7 @@ const NavBar = () => {
       }`}
     >
       <div className="max-w-5xl mx-auto px-4 md:px-8 flex items-center justify-between">
-        <div className="flex items-center space-x-1">
+        <div className="flex flex-col">
           <NavLink 
             to="/" 
             className="text-xl md:text-2xl font-heading font-bold hover:opacity-80 transition-opacity"

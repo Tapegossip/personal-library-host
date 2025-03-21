@@ -7,6 +7,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { AnimatePresence } from "framer-motion";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Essays from "./pages/Essays";
 import Library from "./pages/Library";
@@ -42,9 +43,9 @@ const App = () => {
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <div className="min-h-screen bg-background">
+          <div className="min-h-screen bg-background flex flex-col">
             <NavBar />
-            <main className="pt-16">
+            <main className="pt-16 flex-grow">
               <AnimatePresence mode="wait">
                 <Routes>
                   <Route path="/" element={<Home />} />
@@ -56,6 +57,7 @@ const App = () => {
                 </Routes>
               </AnimatePresence>
             </main>
+            <Footer />
           </div>
         </BrowserRouter>
       </TooltipProvider>

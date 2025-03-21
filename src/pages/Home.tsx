@@ -32,6 +32,32 @@ const Home = () => {
         variants={containerVariants}
         className="space-y-16"
       >
+        {/* About Me Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6">About Me</h2>
+          <div className="glass-morphism p-6 rounded-lg">
+            <p className="mb-4">
+              Hi, I'm an independent thinker and writer exploring the intersection of technology, 
+              philosophy, and culture. Through my essays, I attempt to understand complex systems 
+              and share these insights in an accessible way.
+            </p>
+            <p>
+              My background spans across various disciplines, giving me a unique perspective 
+              on contemporary issues. I believe in the power of rational discourse and continuous 
+              learning to improve both individual lives and society at large.
+            </p>
+            <div className="mt-6">
+              <Link 
+                to="/about" 
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Learn more about me
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+        
         {essays.map((essay, index) => (
           <EssayCard key={essay.id} essay={essay} index={index} />
         ))}
