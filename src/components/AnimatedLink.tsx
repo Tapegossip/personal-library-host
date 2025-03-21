@@ -6,16 +6,17 @@ interface AnimatedLinkProps {
   to: string;
   children: React.ReactNode;
   isActive?: boolean;
+  className?: string;
 }
 
-const AnimatedLink = ({ to, children, isActive }: AnimatedLinkProps) => {
+const AnimatedLink = ({ to, children, isActive, className }: AnimatedLinkProps) => {
   return (
     <NavLink 
       to={to} 
       className={({ isActive: active }) => 
         `relative text-sm md:text-base font-medium transition-colors duration-200 ${
           active || isActive ? 'text-foreground' : 'text-muted-foreground hover:text-foreground/80'
-        }`
+        } ${className || ''}`
       }
     >
       {({ isActive: active }) => (
