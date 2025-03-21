@@ -49,6 +49,7 @@ const NavBar = () => {
               isActive={location.pathname === item.path || 
                 (item.path === '/' && location.pathname === '/') ||
                 (item.path === '/essays' && location.pathname.startsWith('/essay/'))}
+              className="text-blue-500 hover:text-blue-600"
             >
               {item.name}
             </AnimatedLink>

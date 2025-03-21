@@ -7,17 +7,27 @@ const ThemeToggle = () => {
   const [theme, setTheme] = useState<'dark' | 'light'>('dark');
 
   useEffect(() => {
-    // Always use dark mode for initial load
-    document.documentElement.classList.add('dark');
-    setTheme('dark');
+    // Check if user has a preferred theme in localStorage
+    const savedTheme = localStorage.getItem('theme');
+    
+    if (savedTheme === 'light') {
+      document.documentElement.classList.remove('dark');
+      setTheme('light');
+    } else {
+      // Default to dark mode
+      document.documentElement.classList.add('dark');
+      setTheme('dark');
+    }
   }, []);
 
   const toggleTheme = () => {
     if (theme === 'dark') {
       document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
       setTheme('light');
     } else {
       document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
       setTheme('dark');
     }
   };
