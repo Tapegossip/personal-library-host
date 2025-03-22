@@ -1,6 +1,5 @@
 
 import { useState, useEffect, useMemo } from 'react';
-import { motion } from 'framer-motion';
 import { Search, X, BookOpen, Filter, Tags } from 'lucide-react';
 import { useSearch } from '../hooks/useSearch';
 import { libraryItems, allTags, allMediaTypes } from '../data/library';
@@ -221,10 +220,10 @@ const Library = () => {
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Title</TableHead>
-              <TableHead>Author</TableHead>
-              <TableHead>Year</TableHead>
-              <TableHead className="text-right">Link</TableHead>
+              <TableHead className="w-[45%]">Title</TableHead>
+              <TableHead className="w-[30%]">Author</TableHead>
+              <TableHead className="w-[15%]">Year</TableHead>
+              <TableHead className="w-[10%] text-right">Link</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
