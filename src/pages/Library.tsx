@@ -94,7 +94,7 @@ const Library = () => {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by title, author, or tags..."
-            className="w-full pl-10 pr-4 py-2 glass-morphism border border-white/10 rounded-md focus:outline-none focus:ring-1 focus:ring-white/20 text-sm bg-transparent"
+            className="w-full pl-10 pr-4 py-2 glass-morphism border border-white/10 rounded-md focus:outline-none focus:ring-1 focus:ring-black dark:focus:ring-white/20 hover:border-black/40 dark:hover:border-white/20 focus:border-black dark:focus:border-white/20 text-sm bg-transparent transition-colors"
           />
           {searchQuery && (
             <button 
@@ -229,37 +229,14 @@ const Library = () => {
           </TableHeader>
           <TableBody>
             {mounted && paginatedItems.length > 0 ? (
-              <motion.div
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="contents" // This makes the div behave like its children in terms of display
-              >
+              <>
                 {paginatedItems.map((item) => (
-                  <motion.tr
+                  <TableRow
                     key={item.id}
-                    variants={itemVariants}
                     className="border-b border-white/5 hover:bg-white/5 transition-colors dark:hover:bg-white/5 hover:bg-slate-100"
                   >
                     <TableCell className="py-4 pr-4">
                       <div className="font-medium">{item.title}</div>
-                      <div className="mt-1 flex flex-wrap gap-1">
-                        {item.tags.slice(0, 3).map(tag => (
-                          <Badge 
-                            key={tag} 
-                            variant="outline" 
-                            className="text-xs capitalize cursor-pointer"
-                            onClick={() => toggleTag(tag)}
-                          >
-                            {tag}
-                          </Badge>
-                        ))}
-                        {item.tags.length > 3 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{item.tags.length - 3}
-                          </Badge>
-                        )}
-                      </div>
                     </TableCell>
                     <TableCell className="py-4 pr-4 text-sm">{item.author}</TableCell>
                     <TableCell className="py-4 pr-4 text-sm">{item.publishedYear}</TableCell>
@@ -268,9 +245,9 @@ const Library = () => {
                         <span className="sr-only">Visit link for {item.title}</span>
                       </ExternalLink>
                     </TableCell>
-                  </motion.tr>
+                  </TableRow>
                 ))}
-              </motion.div>
+              </>
             ) : (
               <TableRow>
                 <TableCell colSpan={4} className="py-8 text-center text-muted-foreground">
