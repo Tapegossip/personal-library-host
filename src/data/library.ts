@@ -555,15 +555,113 @@ export const libraryItems: LibraryItem[] = [
     tags: ["finance", "quantitative", "interviews", "wall street", "investment banking"],
     type: "book",
     description: "Quantitative questions from Wall Street job interviews with detailed solutions."
-  }
-];
-
-// Extract all unique tags
-export const allTags = Array.from(
-  new Set(libraryItems.flatMap(item => item.tags))
-).sort();
-
-// Extract all media types
-export const allMediaTypes = Array.from(
-  new Set(libraryItems.map(item => item.type))
-).sort();
+  },
+  
+  // Adding new books from the images
+  {
+    id: '53',
+    title: "Thinking in Bets",
+    author: "Annie Duke",
+    publishedYear: 2018,
+    link: "https://www.goodreads.com/book/show/35957157-thinking-in-bets",
+    tags: ["decision making", "psychology", "poker", "uncertainty"],
+    type: "book",
+    description: "Making smarter decisions when you don't have all the facts."
+  },
+  {
+    id: '54',
+    title: "Show Your Work",
+    author: "Austin Kleon",
+    publishedYear: 2014,
+    link: "https://www.goodreads.com/book/show/18290401-show-your-work",
+    tags: ["creativity", "art", "career", "self-improvement"],
+    type: "book"
+  },
+  {
+    id: '55',
+    title: "How To Win Friends and Influence People",
+    author: "Dale Carnegie",
+    publishedYear: 1936,
+    link: "https://www.goodreads.com/book/show/4865.How_to_Win_Friends_and_Influence_People",
+    tags: ["self-help", "psychology", "communication", "relationships"],
+    type: "book"
+  },
+  {
+    id: '56',
+    title: "Atomic Habits",
+    author: "James Clear",
+    publishedYear: 2018,
+    link: "https://www.goodreads.com/book/show/40121378-atomic-habits",
+    tags: ["self-improvement", "habits", "psychology", "productivity"],
+    type: "book"
+  },
+  {
+    id: '57',
+    title: "The One Thing",
+    author: "Gary Keller",
+    publishedYear: 2013,
+    link: "https://www.goodreads.com/book/show/16256798-the-one-thing",
+    tags: ["productivity", "focus", "business", "self-improvement"],
+    type: "book"
+  },
+  {
+    id: '58',
+    title: "Principles",
+    author: "Ray Dalio",
+    publishedYear: 2017,
+    link: "https://www.goodreads.com/book/show/34536488-principles",
+    tags: ["business", "leadership", "decision making", "management"],
+    type: "book"
+  },
+  {
+    id: '59',
+    title: "Digital Gold",
+    author: "Nathaniel Popper",
+    publishedYear: 2015,
+    link: "https://www.goodreads.com/book/show/23546676-digital-gold",
+    tags: ["bitcoin", "cryptocurrency", "finance", "technology", "history"],
+    type: "book"
+  },
+  {
+    id: '60',
+    title: "The Intelligent Investor",
+    author: "Benjamin Graham",
+    publishedYear: 1949,
+    link: "https://www.goodreads.com/book/show/106835.The_Intelligent_Investor",
+    tags: ["finance", "investing", "value investing", "economics"],
+    type: "book"
+  },
+  {
+    id: '61',
+    title: "Good to Great",
+    author: "Jim Collins",
+    publishedYear: 2001,
+    link: "https://www.goodreads.com/book/show/76865.Good_to_Great",
+    tags: ["business", "leadership", "management", "success"],
+    type: "book"
+  },
+  {
+    id: '62',
+    title: "Rich Dad Poor Dad",
+    author: "Robert T. Kiyosaki",
+    publishedYear: 1997,
+    link: "https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad",
+    tags: ["finance", "personal finance", "investing", "money management"],
+    type: "book"
+  },
+  {
+    id: '63',
+    title: "The Way of the Superior Man",
+    author: "David Deida",
+    publishedYear: 2004,
+    link: "https://www.goodreads.com/book/show/79424.The_Way_of_the_Superior_Man",
+    tags: ["masculinity", "spirituality", "relationships", "self-help"],
+    type: "book"
+  },
+  {
+    id: '64',
+    title: "12 Rules for Life",
+    author: "Jordan B. Peterson",
+    publishedYear: 2018,
+    link: "https://www.goodreads.com/book/show/30257963-12-rules-for-life",
+    tags: ["psychology
