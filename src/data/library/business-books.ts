@@ -28,7 +28,7 @@ export const businessBooks: LibraryItem[] = [
     author: "Klaus Schwab, Thierry Malleret",
     publishedYear: 2023,
     link: "https://www.goodreads.com/book/show/54498122-covid-19",
-    tags: ["economics", "politics", "society", "pandemic", "future"],
+    tags: ["economics", "politics", "society", "pandemic", "future", "business"],
     type: "book",
     description: "Examines the far-reaching implications of the COVID-19 pandemic on society, economics, and global politics."
   },

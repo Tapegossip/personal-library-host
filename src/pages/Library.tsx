@@ -1,8 +1,7 @@
-
 import { useState, useEffect, useMemo } from 'react';
 import { Search, X, BookOpen, Filter, Tags } from 'lucide-react';
 import { useSearch } from '../hooks/useSearch';
-import { libraryItems, allTags, allMediaTypes } from '../data/library';
+import { dedupedLibraryItems, allTags, allMediaTypes } from '../data/library';
 import ExternalLink from '../components/ExternalLink';
 import { 
   Table, 
@@ -48,14 +47,13 @@ const Library = () => {
     toggleTag,
     toggleType,
     clearFilters
-  } = useSearch({ initialItems: libraryItems });
+  } = useSearch({ initialItems: dedupedLibraryItems });
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
   useEffect(() => {
-    // Reset to first page when filters change
     setCurrentPage(1);
   }, [searchQuery, selectedTags, selectedTypes]);
   
@@ -264,7 +262,6 @@ const Library = () => {
             
             {[...Array(totalPages)].map((_, i) => {
               const pageNum = i + 1;
-              // Show first page, last page, and pages around current page
               if (
                 pageNum === 1 ||
                 pageNum === totalPages ||
@@ -282,7 +279,6 @@ const Library = () => {
                 );
               }
               
-              // Show ellipsis in gaps, but only once
               if (
                 (pageNum === 2 && currentPage > 3) ||
                 (pageNum === totalPages - 1 && currentPage < totalPages - 2)

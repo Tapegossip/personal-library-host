@@ -1,4 +1,3 @@
-
 import { LibraryItem } from './types';
 
 export const miscellaneousBooks: LibraryItem[] = [
@@ -71,8 +70,9 @@ export const miscellaneousBooks: LibraryItem[] = [
     author: "Klaus Schwab, Thierry Malleret",
     publishedYear: 2023,
     link: "https://www.goodreads.com/book/show/54498122-covid-19",
-    tags: ["economics", "politics", "society", "pandemic"],
-    type: "book"
+    tags: ["economics", "politics", "society", "pandemic", "miscellaneous"],
+    type: "book",
+    description: "The book explores how COVID-19 has disrupted social, economic, and geopolitical systems globally."
   },
   {
     id: '208',

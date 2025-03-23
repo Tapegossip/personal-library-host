@@ -3,22 +3,22 @@ import { LibraryItem } from './types';
 
 export const selfImprovementBooks: LibraryItem[] = [
   {
-    id: '21',
+    id: '301',  // Changed from '21' to avoid duplicate with psychology books
     title: "Thinking, Fast and Slow",
     author: "Daniel Kahneman",
     publishedYear: 2011,
     link: "https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow",
-    tags: ["psychology", "behavioral economics", "decision making", "cognitive biases"],
+    tags: ["psychology", "behavioral economics", "decision making", "cognitive biases", "self-improvement"],
     type: "book",
     description: "Nobel Prize winner Daniel Kahneman's groundbreaking work on the two systems that drive the way we think."
   },
   {
-    id: '22',
+    id: '302',  // Changed from '22' to avoid duplicate with psychology books
     title: "Noise: A Flaw in Human Judgment",
     author: "Daniel Kahneman, Olivier Sibony, Cass R. Sunstein",
     publishedYear: 2021,
     link: "https://www.goodreads.com/book/show/55339408-noise",
-    tags: ["psychology", "decision making", "behavioral economics", "judgment"],
+    tags: ["psychology", "decision making", "behavioral economics", "judgment", "self-improvement"],
     type: "book",
     description: "An exploration of how noise (random variability) affects our decision-making processes."
   },
