@@ -48,5 +48,35 @@ export const philosophyBooks: LibraryItem[] = [
     tags: ["psychology", "self-help", "philosophy", "ethics", "personal development"],
     type: "book",
     description: "A guide for living a more meaningful life with rules based on ancient traditions, psychology, and stories."
+  },
+  {
+    id: '180',
+    title: "Essays in Existentialism",
+    author: "Jean-Paul Sartre",
+    publishedYear: 1965,
+    link: "https://www.goodreads.com/book/show/20518.Essays_in_Existentialism",
+    tags: ["philosophy", "existentialism", "essays", "consciousness"],
+    type: "book",
+    description: "A collection of essays exploring Sartre's existentialist philosophy."
+  },
+  {
+    id: '181',
+    title: "Plato and a Platypus Walk into a Bar",
+    author: "Thomas Cathcart, Daniel Klein",
+    publishedYear: 2007,
+    link: "https://www.goodreads.com/book/show/180506.Plato_and_a_Platypus_Walk_into_a_Bar_",
+    tags: ["philosophy", "humor", "introduction", "concepts"],
+    type: "book",
+    description: "Understanding philosophy through jokes."
+  },
+  {
+    id: '182',
+    title: "Discourses on Livy",
+    author: "Niccolo Machiavelli",
+    publishedYear: 1531,
+    link: "https://www.goodreads.com/book/show/28588.Discourses_on_Livy",
+    tags: ["philosophy", "politics", "history", "governance"],
+    type: "book",
+    description: "Machiavelli's analysis of Roman history and its lessons for republican governance."
   }
 ];

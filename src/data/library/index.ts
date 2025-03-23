@@ -7,6 +7,16 @@ import { technologyBooks } from './technology-books';
 import { businessBooks } from './business-books';
 import { selfImprovementBooks } from './self-improvement-books';
 import { fictionBooks } from './fiction-books';
+import { mathematicsBooks } from './mathematics-books';
+import { historyBooks } from './history-books';
+import { psychologyBooks } from './psychology-books';
+import { physicsBooks } from './physics-books';
+import { astronomyBooks } from './astronomy-books';
+import { biologyBooks } from './biology-books';
+import { geographyBooks } from './geography-books';
+import { politicsBooks } from './politics-books';
+import { engineeringBooks } from './engineering-books';
+import { sociologyBooks } from './sociology-books';
 
 // Combine all book categories
 export const libraryItems: LibraryItem[] = [
@@ -16,7 +26,17 @@ export const libraryItems: LibraryItem[] = [
   ...technologyBooks,
   ...businessBooks,
   ...selfImprovementBooks,
-  ...fictionBooks
+  ...fictionBooks,
+  ...mathematicsBooks,
+  ...historyBooks,
+  ...psychologyBooks,
+  ...physicsBooks,
+  ...astronomyBooks,
+  ...biologyBooks,
+  ...geographyBooks,
+  ...politicsBooks,
+  ...engineeringBooks,
+  ...sociologyBooks
 ];
 
 // Export derived data

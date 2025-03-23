@@ -277,5 +277,65 @@ export const financeBooks: LibraryItem[] = [
     link: "https://www.goodreads.com/book/show/69571.Rich_Dad_Poor_Dad",
     tags: ["finance", "personal finance", "investing", "money management"],
     type: "book"
+  },
+  {
+    id: '190',
+    title: "Definitive Guide to Position Sizing",
+    author: "Van K. Tharp",
+    publishedYear: 2013,
+    link: "https://www.goodreads.com/book/show/18928801-the-definitive-guide-to-position-sizing",
+    tags: ["finance", "trading", "risk management", "position sizing", "money management"],
+    type: "book",
+    description: "How to evaluate your trading system and use position sizing to meet your objectives."
+  },
+  {
+    id: '191',
+    title: "Fooling Some of the People All Of The Time",
+    author: "David Einhorn",
+    publishedYear: 2011,
+    link: "https://www.goodreads.com/book/show/7663760-fooling-some-of-the-people-all-of-the-time",
+    tags: ["finance", "investing", "short selling", "hedge funds", "memoir"],
+    type: "book",
+    description: "A long short story about Allied Capital and the financial system."
+  },
+  {
+    id: '192',
+    title: "Trading Systems and Methods",
+    author: "Perry J. Kaufman",
+    publishedYear: 1998,
+    link: "https://www.goodreads.com/book/show/21296.Trading_Systems_and_Methods",
+    tags: ["finance", "trading", "systems", "technical analysis", "quantitative"],
+    type: "book",
+    description: "A comprehensive guide to the development and evaluation of trading systems."
+  },
+  {
+    id: '193',
+    title: "One Up On Wall Street",
+    author: "Peter Lynch",
+    publishedYear: 1989,
+    link: "https://www.goodreads.com/book/show/762462.One_Up_On_Wall_Street",
+    tags: ["finance", "investing", "stocks", "value investing"],
+    type: "book",
+    description: "How to use what you already know to make money in the market."
+  },
+  {
+    id: '194',
+    title: "You Can Be a Stock Market Genius",
+    author: "Joel Greenblatt",
+    publishedYear: 1997,
+    link: "https://www.goodreads.com/book/show/116186.You_Can_Be_a_Stock_Market_Genius",
+    tags: ["finance", "investing", "special situations", "value investing"],
+    type: "book",
+    description: "Uncover the secret hiding places of stock market profits."
+  },
+  {
+    id: '195',
+    title: "Margin of Safety",
+    author: "Seth A. Klarman",
+    publishedYear: 1991,
+    link: "https://www.goodreads.com/book/show/746936.Margin_of_Safety",
+    tags: ["finance", "investing", "value investing", "risk management"],
+    type: "book",
+    description: "Risk-averse value investing strategies for the thoughtful investor."
   }
 ];
