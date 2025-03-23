@@ -664,4 +664,4 @@ export const libraryItems: LibraryItem[] = [
     author: "Jordan B. Peterson",
     publishedYear: 2018,
     link: "https://www.goodreads.com/book/show/30257963-12-rules-for-life",
-    tags: ["psychology
+    tags: ["psychology", "self
