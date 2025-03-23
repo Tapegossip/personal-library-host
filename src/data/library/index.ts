@@ -1,7 +1,7 @@
 
 import { LibraryItem, getAllTags, getAllMediaTypes } from './types';
 import { philosophyBooks } from './philosophy-books';
-import { financeBooks } from './finance-books';
+import { financeBooks } from './finance';  // Updated import
 import { scienceBooks } from './science-books';
 import { technologyBooks } from './technology-books';
 import { businessBooks } from './business-books';
