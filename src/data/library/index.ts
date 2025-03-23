@@ -17,6 +17,7 @@ import { geographyBooks } from './geography-books';
 import { politicsBooks } from './politics-books';
 import { engineeringBooks } from './engineering-books';
 import { sociologyBooks } from './sociology-books';
+import { miscellaneousBooks } from './miscellaneous-books'; // New import
 
 // Combine all book categories
 export const libraryItems: LibraryItem[] = [
@@ -36,7 +37,8 @@ export const libraryItems: LibraryItem[] = [
   ...geographyBooks,
   ...politicsBooks,
   ...engineeringBooks,
-  ...sociologyBooks
+  ...sociologyBooks,
+  ...miscellaneousBooks // Add the new books
 ];
 
 // Export derived data
