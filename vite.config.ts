@@ -7,7 +7,7 @@ import { componentTagger } from "lovable-tagger";
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   // Make sure the base path matches exactly your repository name
-  base: mode === 'production' ? '/tapegossip/' : '/',
+  base: mode === 'production' ? '/site/' : '/',
   server: {
     host: "::",
     port: 8080,
