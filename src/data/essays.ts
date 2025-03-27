@@ -15,7 +15,7 @@ export const essays: Essay[] = [
     title: 'The Web of Financial Cycles: How Money Flows and Why It Matters',
     slug: 'web-of-financial-cycles',
     date: '2024-04-20',
-    excerpt: 'Ever wonder why gas prices suddenly shoot up, or why your favorite coffee shop had to close during the last recession? Or maybe why your parents keep saying "we should've bought that house back in 2010!"',
+    excerpt: "Ever wonder why gas prices suddenly shoot up, or why your favorite coffee shop had to close during the last recession? Or maybe why your parents keep saying \"we should've bought that house back in 2010!\"",
     content: `
       <p>Ever wonder why gas prices suddenly shoot up, or why your favorite coffee shop had to close during the last recession? Or maybe why your parents keep saying "we should've bought that house back in 2010!"</p>
 
