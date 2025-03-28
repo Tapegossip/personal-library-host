@@ -95,7 +95,7 @@ const Home = () => {
                   to={`/essay/${essay.slug}`}
                   className="text-blue-500 hover:text-blue-600 transition-colors font-medium"
                 >
-                  {essay.title}
+                  {essay.mainTitle}
                 </Link>
               </motion.div>
             ))}

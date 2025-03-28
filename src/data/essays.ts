@@ -1,7 +1,9 @@
 
 export interface Essay {
   id: string;
-  title: string;
+  mainTitle: string;
+  subtitle?: string;
+  title: string; // We'll keep this for backward compatibility
   slug: string;
   date: string;
   excerpt: string;
@@ -12,7 +14,9 @@ export interface Essay {
 export const essays: Essay[] = [
   {
     id: '1',
-    title: 'The Web of Financial Cycles: How Money Flows and Why It Matters',
+    mainTitle: 'The Web of Financial Cycles',
+    subtitle: 'How Money Flows and Why It Matters',
+    title: 'The Web of Financial Cycles: How Money Flows and Why It Matters', // Keep for backward compatibility
     slug: 'web-of-financial-cycles',
     date: '2024-04-20',
     excerpt: "Ever wonder why gas prices suddenly shoot up, or why your favorite coffee shop had to close during the last recession? Or maybe why your parents keep saying \"we should've bought that house back in 2010!\"",
@@ -308,6 +312,8 @@ export const essays: Essay[] = [
   },
   {
     id: '2',
+    mainTitle: 'Investing in Synthesis',
+    subtitle: '',
     title: 'Investing in Synthesis',
     slug: 'investing-in-synthesis',
     date: '2024-03-15',
@@ -317,6 +323,8 @@ export const essays: Essay[] = [
   },
   {
     id: '3',
+    mainTitle: 'Why Learn Compilers',
+    subtitle: '',
     title: 'Why Learn Compilers',
     slug: 'why-learn-compilers',
     date: '2024-03-15',
